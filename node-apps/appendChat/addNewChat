@@ -1,0 +1,17 @@
+const fs = require("fs").promises;
+
+const newUser = {
+    id: 1,
+    name: "Me",
+    pet: "Lucy"
+};
+
+const newMessage = "KIT";
+
+fs.appendFile("chat.txt", newMessage + "/n")
+  .then(() => {
+    console.log("message added to chat log");
+  })
+  .catch((error) => {
+    console.log("Error occurred:", error);
+  });

@@ -1,0 +1,22 @@
+const readline = require("readline");
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+const fortunes = [
+  "You will find unexpected joy in the little things.",
+  "A new opportunity will open doors for you.",
+  "Adventure is just around the corner.",  
+  "Embrace change, and good things will follow."
+];
+
+rl.question("Welcome to the Fortune Teller! What's your name? ", (name) => {
+    const randomIndex = Math.floor(Math.random() * fortunes.length);
+    const randomFortune = fortunes[randomIndex];
+
+    console.log(`Hello, ${name}! Your fortune today: ${randomFortune}`);
+
+    rl.close();
+});
