@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/jumbotron/">
+    <title>Kim Resume</title>
+    <style>
+        .exp {
+            margin-bottom: 1rem;
+        }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Resume</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#exp">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#edu">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">External Portfolios
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="https://www.kimv.me" target="blank">Portfolio CMS</a>
+              <a class="dropdown-item" href="https://pacific-castle-57545-b607762ca67c.herokuapp.com/" target="blank">React/Heroku</a>
+              <a class="dropdown-item" href="https://kimvaws.com" target="blank">AWS Single Page</a>
+              <a class="dropdown-item" href="https://github.com/dezineskv" target="blank">Github</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-4">
+            <br><strong>Kim Vidal</strong></h1>
+          <br>Hello! This is my HTML resume site.<br>
+          I come from an Email Automation, Email Developer and Marketing professional background. I have learned a lot from that environment including theory and hands-on. And I'm ready to go to the tech side and learn, grow and master challenges that come by.
+        </div>
+      </div>
+      <div class="container">
+        <!-- Experience sections -->
+        <div class="row" id="exp">
+          <div class="col-md-8">
+            <h2>Experience</h2>
+            <section class="exp">
+                <span style="font-weight: bold">Marketing Technology Developer | Marvel Marketers</span>
+                <br>APRIL 2022 - AUGUST 2023
+                <ul>
+                    <li>Marketing Automation API for Marketo using REST</li>
+                    <li>Developed responsive, customized email templates and landing pages</li>
+                    <li>SQL list pulls via 'plx' for Google Cloud clients</li>
+                    <li>Wordpress admin for company site and won Superhero of the Quarter Q12023</li>
+                </ul>
+            </section>
+            <section class="exp">         
+                <span style="font-weight: bold">Marketing Automation Specialist | Meta (contractor)</span>
+                <br>APRIL 2021 - APRIL 2022
+                <ul>
+                    <li>Global Business Marketing department</li>
+                    <li>Marketo email build, scheduling, Salesforce syncing & reporting</li>
+                    <li>Collaboration with program managers & stakeholders</li>
+                </ul>
+            </section>
+            <section class="exp">         
+                <span style="font-weight: bold">Programs Manager | Google Cloud (contractor)</span>
+                <br>JULY 2018 - JULY 2020
+                <ul>
+                    <li>Provisioned user roles & permissions via G Suite, as super admin of a Cloud Community</li>
+                    <li>Maintained confidential material access of product roadmaps</li>
+                    <li>Initialized the database list of all existing and new community users</li>
+                    <li>Collaborated with engineers to configure in-house email platform</li>
+                    <li>Created engagement reporting from BigQuery & Google Analytics</li>
+                </ul>
+            </section>
+            <section class="exp">         
+                <span style="font-weight: bold">Senior Email Automation Manager | LogMeIn</span>
+                <br>MARCH 2015 - MAY 2018
+                <ul>
+                    <li>Made dynamic content email templates for the team to utilize</li>
+                    <li>Email nurture architecture config, testing...</li>
+                    <li>Trained team members on setup of triggered emails thru queries/logic in the new platform</li>
+                </ul>
+            </section>
+            <section class="exp">         
+                <span style="font-weight: bold">Email Developer | Esurance (contractor)</span>
+                <br>OCTOBER 2014 - MARCH 2015
+                <ul>
+                    <li>Developed workflows & documentation to train email developers</li>
+                    <li>Coordinated with Dev team on staging & production cycles per Jira</li>
+                </ul>
+            </section>
+          </div>
+          <div class="col-md-4">
+            <h2>Get in Touch</h2>
+            <form id="contactForm" data-sb-form-api-token="528deb0c-5a63-4d55-8e26-74b3abe0fbba">
+                <div class="form-floating mb-3"><label for="emailAddress">Email Address</label>
+                    <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+                    
+                    <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                    <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                </div>
+                <div class="form-floating mb-3"><label for="message">Message</label>
+                    <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+                    
+                    <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+                </div>
+                <div class="d-none" id="submitSuccessMessage">
+                    <div class="text-center mb-3">
+                        <div class="fw-bolder">Form submission successful!</div>
+                    </div>
+                </div>
+                <div class="d-none" id="submitErrorMessage">
+                    <div class="text-center text-danger mb-3">Error sending message!</div>
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+                </div>
+            </form>
+</div>
+          <div class="col-md-12" id="edu">
+            <hr>
+            <h2>Education</h2>
+            <strong>University of California, Santa Cruz</strong> | 1997
+            <br>Bachelor of Arts Degree and Economics as double
+          </div>
+          <div class="col-md-12" id="skills">
+            <hr>
+            <h2>Skills</h2>
+            <p>HTML, CSS, REST API, SQL, Javascript, React, Node, Express, Python, Django, GIT, Cloud essentials, more...</p>
+          </div>      
+
+  <!-- SB Forms JS -->
+  <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+          </div>
+        </div>
+    </div> <!-- /container -->
+    </main>
+    <footer class="container">
+      <p>&copy; 2024</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
