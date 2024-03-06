@@ -6,9 +6,104 @@
     <title>Weather App</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+    <script src="/docs/5.3/assets/js/color-modes.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/modals/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <style>
+        .modal {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--bs-modal-zindex);
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+        }
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+  
+        .b-example-divider {
+          width: 100%;
+          height: 3rem;
+          background-color: rgba(0, 0, 0, .1);
+          border: solid rgba(0, 0, 0, .15);
+          border-width: 1px 0;
+          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+  
+        .b-example-vr {
+          flex-shrink: 0;
+          width: 1.5rem;
+          height: 100vh;
+        }
+  
+        .bi {
+          vertical-align: -.125em;
+          fill: currentColor;
+        }
+  
+        .nav-scroller {
+          position: relative;
+          z-index: 2;
+          height: 2.75rem;
+          overflow-y: hidden;
+        }
+  
+        .nav-scroller .nav {
+          display: flex;
+          flex-wrap: nowrap;
+          padding-bottom: 1rem;
+          margin-top: -1px;
+          overflow-x: auto;
+          text-align: center;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+        }
+  
+  
+        .bd-mode-toggle {
+          z-index: 1500;
+        }
+  
+        .bd-mode-toggle .dropdown-menu .active .bi {
+          display: block !important;
+        }
+
+        .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--bs-modal-color);
+    pointer-events: auto;
+    background-color: var(--bs-modal-bg);
+    background-clip: padding-box;
+    border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+    border-radius: var(--bs-modal-border-radius);
+    outline: 0;
+}
+.rounded-4 {
+    border-radius: .5rem !important;
+}
+      </style>
 </head>
-<body>
-    <div class="jumbotron">
+<body style="background-color: #6c757d">
+    <!-- <div class="jumbotron">
         <div class="container">
           <h1 class="display-4">
             <h3 style="margin-bottom: 10px">What is the current weather in your city?</h3>
@@ -21,10 +116,33 @@
             <p id="imgN">
             </p>
         </div>
-      </div>
+      </div> -->
+      <div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="modalSheet">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content rounded-4 shadow" style="background-color: #343a40; padding: 20px">
+            <div class="modal-header border-bottom-0">
+              <h1 class="modal-title fs-5" style="color: white">What is the current weather in your city?</h1>
 
-<div id="one" style="text-align:center;">
-<i>What will you do today?</i></div>
+            </div>
+            
+            <input id="cityInput" type="text" placeholder="City" style="margin-left: 20px; margin-right: 20px">
+
+            <div class="modal-footer flex-column align-items-stretch w-80 gap-2 pb-3 border-top-0">
+                <button type="button" class="btn btn-lg btn-primary" onclick = "addWeather()">Input City</button>          
+              </div>
+            <div class="modal-body py-0">
+                <div class="cityDisplay" style="color: white"></div>
+                <div style="color: white">
+                    Temperature in Farenheit: <span class="temp"></span> 
+                </div>
+                <p id="imgN">
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+<div style="text-align:center;">
+<h3 id="one" >What will you do today?</h3></div>
 </body>
 <script src="weather-app.js"></script>
 </html>
